@@ -4,7 +4,7 @@
   "width": 800,
   "height": 500,
   "data": {
-    "url": "ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/js/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "projection": {"type": "equalEarth"},
@@ -16,7 +16,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "../data/GDPR_privacy_approval.csv"
+              "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_privacy_approval.csv"
             },
             "key": "Country",
             "fields": ["GDPRAdequacy"]
