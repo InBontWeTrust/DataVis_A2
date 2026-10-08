@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "../data/GDPR_fines.csv", "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "groupby": ["Country"],
+      "aggregate": [
+        {"op": "count", "field": "Fine", "as": "total_fines"}
+      ]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": 90}},
+    "y": {"field": "total_fines", "type": "quantitative"}
+  }
+  
+}
