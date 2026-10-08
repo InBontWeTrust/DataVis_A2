@@ -8,7 +8,7 @@
   },
   "transform": [
   { "calculate": "toDate(datum.Date)", "as": "date" },
-  { "calculate": "toNumber(datum.Fine (€))", "as": "fine" }
+  { "calculate": "toNumber(datum.Fine)", "as": "fine" }
 ],
   "mark": "point",
   "encoding": {
