@@ -7,7 +7,8 @@
     }
   },
   "transform": [
-  { "calculate": "toDate(datum.Date)", "as": "date" }
+  { "calculate": "toDate(datum.Date)", "as": "date" },
+  { "calculate": "toNumber(datum.Fine (€))", "as": "fine" }
 ],
   "mark": "point",
   "encoding": {
@@ -17,14 +18,14 @@
       "scale": {"zero": false}
     },
     "y": {
-      "field": "Fine (€)",
+      "field": "fine",
       "type": "quantitative",
       "scale": {"zero": false}
     },
     "color": {"field": "Sector", "type": "nominal"},
     "tooltip": [
       {"field": "date", "type": "temporal"},
-      {"field": "Fine (€)", "type": "quantitative"},
+      {"field": "fine", "type": "quantitative"},
       {"field": "Sector", "type": "nominal"}
     ]
 

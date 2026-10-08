@@ -1,4 +1,4 @@
-﻿ETid,Country,Authority,Date,Fine (€),Controller / Processor,Sector,Article(s),Latitude,Longitude,JitteredLatitude,JitteredLongitude
+﻿ETid,Country,Authority,Date,Fine,Controller / Processor,Sector,Article(s),Latitude,Longitude,JitteredLatitude,JitteredLongitude
 ETid-96,Austria,Austrian Data Protection Authority (dsb),29/10/2019,"13,000,000",Austrian Post,Transportation and Energy,"Art. 5 (1) a) GDPR, Art. 6 GDPR",47.516231,14.550072,47.636831,14.688272
 ETid-871,Austria,Austrian Data Protection Authority (dsb),28/09/2021,"9,500,000",Austrian Post,Transportation and Energy,Art. 12 (2) GDPR,47.516231,14.550073,47.568431,14.600873
 ETid-872,Austria,Austrian Data Protection Authority (dsb),1/01/2021,"4,000,000",Bank,"Finance, Insurance and Consulting","Art. 5 (1) f) GDPR, Art. 32 GDPR",47.516231,14.550074,47.644231,14.550474
