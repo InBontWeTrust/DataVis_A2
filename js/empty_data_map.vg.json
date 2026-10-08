@@ -37,7 +37,7 @@
           },
           "legend": {
           "title": "GDPR Adequacy",
-          "values": ["Adequate", "Special arrangement", "EU or EEA Member", "Inadequate"]
+          "values": ["EU or EEA Member", "Adequate", "Special arrangement", "Inadequate"]
           }
         },
         "tooltip": [

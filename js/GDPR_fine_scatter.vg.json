@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter",
+  "data": {
+    "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_fines.csv", "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+  { "calculate": "toDate(datum.Date)", "as": "date" }
+],
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "scale": {"zero": false}
+    },
+    "y": {
+      "field": "Fine (€)",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+    "color": {"field": "Sector", "type": "nominal"},
+    "tooltip": [
+      {"field": "date", "type": "temporal"},
+      {"field": "Fine (€)", "type": "quantitative"},
+      {"field": "Sector", "type": "nominal"}
+    ]
+
+  }
+}
