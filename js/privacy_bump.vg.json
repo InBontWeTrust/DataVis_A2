@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Changes in the Perceptions of Privacy Risks in Australia, Ranked Over Time",
+  "width": 650,
+  "height": 440,
+  "data": {
+    "values": [
+      {"PrivacyRisk": "Data security/Data breaches", "Rank 2020": 2, "Rank 2023": 1, "Rank 2026": 1},
+      {"PrivacyRisk": "Identity theft/fraud", "Rank 2020": 1, "Rank 2023": 2, "Rank 2026": 2},
+      {"PrivacyRisk": "Sending information overseas", "Rank 2020": 6, "Rank 2023": 6, "Rank 2026": 3},
+      {"PrivacyRisk": "Artificial intelligence", "Rank 2020": 10, "Rank 2023": 8, "Rank 2026": 4},
+      {"PrivacyRisk": "Smart phones/apps", "Rank 2020": 4, "Rank 2023": 3, "Rank 2026": 5},
+      {"PrivacyRisk": "Social media sites", "Rank 2020": 3, "Rank 2023": 5, "Rank 2026": 6},
+      {"PrivacyRisk": "Location tracking", "Rank 2020": 5, "Rank 2023": 4, "Rank 2026": 7},
+      {"PrivacyRisk": "Profiling", "Rank 2020": 8, "Rank 2023": 7, "Rank 2026": 8},
+      {"PrivacyRisk": "Surveillances of Australians by foreign entities", "Rank 2020": 7, "Rank 2023": 9, "Rank 2026": 9},
+      {"PrivacyRisk": "ID Scanning", "Rank 2020": 9, "Rank 2023": 10, "Rank 2026": 10}
+    ]
+  },
+  "transform": [
+    {
+      "fold": ["Rank 2020", "Rank 2023", "Rank 2026"],
+      "as": ["Year", "Rank"]
+    },
+    {
+      "calculate": "toNumber(replace(datum.Year, 'Rank ', ''))",
+      "as": "Year"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "sort": [2020, 2023, 2026],
+      "axis": {
+        "title": null,
+        "labelFontSize": 15,
+        "labelFontWeight": "bold",
+        "labelPadding": 12,
+        "domain": false,
+        "ticks": false,
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "Rank",
+      "type": "quantitative",
+      "scale": {
+        "domain": [10.5, 0.5],
+        "nice": false
+      },
+      "axis": {
+        "title": "Privacy risk ranking",
+        "titleFontSize": 13,
+        "labelFontSize": 11,
+        "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "grid": true,
+        "gridColor": "#dedbd2",
+        "gridDash": [3, 3],
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "color": {
+      "field": "PrivacyRisk",
+      "type": "nominal",
+      "scale": {
+        "scheme": "tableau20"
+
+    
+      }
+    },
+    "detail": {
+      "field": "PrivacyRisk"
+    },
+    "tooltip": [
+      {"field": "PrivacyRisk", "type": "nominal", "title": "Privacy risk"},
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Rank", "type": "quantitative", "title": "Rank", "format": ".0f"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "strokeWidth": 10,
+        "point": {
+          "filled": true,
+          "size": 200,
+          "strokeWidth": 1
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Year === 2026"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 9,
+        "fontSize": 10,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {"field": "PrivacyRisk"},
+        "color": {"field": "PrivacyRisk", "type": "nominal", "scale": {"scheme": "tableau20"}, "legend": null}
+      }
+    }
+  ]
+}

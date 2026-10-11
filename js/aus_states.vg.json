@@ -1,15 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple bar chart with ranged data (aka Gantt Chart).",
+  "title": "A simple bar chart with ranged data (aka Gantt Chart).",
   "data": {
-    "url": "../data/privacy_legislation.csv", "format": {
+    "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv", "format": {
       "type": "csv"
     }
   },
   "mark": "bar",
   "encoding": {
-    "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0}},
-    "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1975, 2026]}},
-    "x2": {"field": "End"}
+    "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0}, "sort": "x"},
+    "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1950, 2027]}},
+    "x2": {"field": "End"},
+    "color": {"field": "Location", "type": "nominal"},
+    "tooltip": [
+      {"field": "Legislation", "type": "nominal"},
+      {"field": "Location", "type": "nominal"},
+      {"field": "Start", "type": "quantitative"},
+      {"field": "End", "type": "quantitative"}
+    ]
   }
+
 }
