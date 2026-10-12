@@ -1,8 +1,73 @@
-#choropleth_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+html,
+body {
+    background-color: #F3FAF9;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+body {
+	background-color: white;
+}
+
+
+#header-title {
+	background-color: #2c92d6;
+	color: white;
+	height: 150px;
+}
+
+h1 {
+    text-align: center;
+    color: #527298;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #527298;
+    font-size: 20px;
+}
+
+p {
+    color: #527298;
+    font-size: 16px;
+}
+
+
+
+
+#header {
+	margin-top: 0px;
+	
+}
+
+#header-content {
+	background-color: #2c92d6;
+	
+}
+
+#header-content p {
+	color: white;
+	padding: 10px;
+	
+}
+
+.bitcount-single-header {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+#header-title h1 {
+	font-family: "Bitcount Single", system-ui;
+	color: white;
+	font-size: 60px;
+	font-weight: 400;
+
 }

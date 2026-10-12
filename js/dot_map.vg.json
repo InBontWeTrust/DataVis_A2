@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": "container",
   "height": 450,
-  "title": {"text": "Total GDPR Fines by Country", "subtitle": "Including fines over one million Euros"},
+  "title": {"text": "GDPR Fines by Country and Sector", "subtitle": "Including fines over one million Euros"},
   "projection": {"type": "equalEarth", "scale": 750, "center": [2,47]},
   "layer": [
     {
@@ -22,14 +22,13 @@
       "encoding": {
         "longitude": {"field": "JitteredLongitude", "type": "quantitative"},
         "latitude": {"field": "JitteredLatitude", "type": "quantitative"},
+        "color": {"field": "Sector", "type": "nominal"},
 
       "tooltip": [
-        {"field": "Country", "type": "nominal", "title": "Country"},
-        {
-          "field": "Fine",
-          "type": "quantitative",
-          "title": "Fine (Euros)"
-        }
+        {"field": "Country", "type": "nominal"},
+        {"field": "Controller / Processor", "type": "nominal"},
+      {"field": "Fine", "type": "quantitative"},
+      {"field": "Sector", "type": "nominal"}
       
 
       ]

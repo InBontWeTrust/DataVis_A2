@@ -7,20 +7,74 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
   
   <!-- CSS file -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+
+
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet">
+
+  
 
 
 </head>
 <body>
-  
-<div id="choropleth_map"></div>
+
+  <div class="pure-g" id="header">
+    <div class="pure-u-1 bitcount-single-header" id="header-title">
+      <h1>The Data on Data Privacy</h1>
+    </div>
+    
+  </div>
+  <div class="pure-g" id="header-content">
+    <div class="pure-u-1-2" id="header-para">
+      <p>Data privacy lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="pure-u-1-2">
+      <img src="https://legit.eu/wp-content/uploads/2023/01/Data-Privacy-vs.-Data-Security-768x402.webp" alt="Privacy" width="500", height="260">
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1"> 
+      <h2>Australia: Protections and Views</h2>
+    </div>
+    
+  </div>
+
+
+
+
+  <div class="pure-g">
+    <div class="pure-u-1-2" id="choropleth_map"></div>
+    <div class="pure-u-1-2" id="dot_map"></div>
+  </div>
+
+
+
+
 
 <script type="text/javascript">
+
+  var spec1 = "js/aus_states.vg.json";
+  vegaEmbed('#aus_states', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
 
   var spec2 = "js/empty_data_map.vg.json";
   vegaEmbed('#choropleth_map', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+
+  var spec3 = "js/dot_map.vg.json";
+  vegaEmbed('#dot_map', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  
 </script>
 
 </body>

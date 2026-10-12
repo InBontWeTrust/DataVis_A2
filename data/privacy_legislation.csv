@@ -1,17 +1,16 @@
-﻿Legislation,Location,Start,End
-Privacy Committee Act 1975,New South Wales,1975,1998
-Privacy Act 1988,Federal,1988,2026
-National Health Act 1953,Federal,1991,2026
-Telecommunications Act 1997,Federal,1997,2026
-Privacy and Personal Information Protection Act 1998,New South Wales,1998,2026
-Information Privacy Act 2000,Victoria,2000,2014
-Health Records Act 2001,Victoria,2001,2026
-Health Records and Information Privacy Act 2002,New South Wales,2002,2026
-Personal Information Protection Act 2004,Tasmania,2004,2026
-Workplace Surveillance Act,New South Wales,2005,2026
-Information Privacy Act 2009,Queensland,2009,2026
-Privacy and Data Protection Act 2014,Victoria,2014,2026
-Privacy and Other Legislation Amendment Act 2024,Federal,2024,2026
-Criminal Code Act 1995,Federal,2024,2026
-Provacy and Responsible Information Sharing Act 2024,Western Australia,2024,2026
-Privacy Amendment (Personal Data Protection) Bill 2026,Federal,2026,2026
+﻿Legislation,Location,Start,End,Latitude,Longitude,JitteredLatitude,JitteredLongitude
+Privacy Committee Act 1975,New South Wales,1975,1998,-33.8688,151.2093,-33.69482109,150.8298459
+Privacy Act 1988,Federal,1988,2026,-35.28,149.13,-34.81946427,148.7577931
+National Health Act 1953,Federal,1991,2026,-35.28,149.13,-35.40110475,149.3138875
+Telecommunications Act 1997,Federal,1997,2026,-35.28,149.13,-35.30737375,148.6775226
+Privacy and Personal Information Protection Act 1998,New South Wales,1998,2026,-33.8688,151.2093,-33.70523731,151.0351121
+Information Privacy Act 2000,Victoria,2000,2014,-37.81,144.96,-37.8031002,144.9561618
+Health Records Act 2001,Victoria,2001,2026,-37.81,144.96,-37.72591291,144.6794022
+Health Records and Information Privacy Act 2002,New South Wales,2002,2026,-33.8688,151.2093,-33.85071917,151.5925007
+Personal Information Protection Act 2004,Tasmania,2004,2026,-42.88,147.32,-43.18166282,147.4326252
+Workplace Surveillance Act,New South Wales,2005,2026,-33.8688,151.2093,-33.68269086,151.4897453
+Information Privacy Act 2009,Queensland,2009,2026,-27.47,153.02,-27.08155535,152.7510307
+Privacy and Data Protection Act 2014,Victoria,2014,2026,-37.81,144.96,-38.27314439,144.7018596
+Privacy and Other Legislation Amendment Act 2024,Federal,2024,2026,-35.28,149.13,-34.84824014,149.1079457
+Criminal Code Act 1995,Federal,2024,2026,-35.28,149.13,-35.73145873,149.1455158
+Privacy and Responsible Information Sharing Act 2024,Western Australia,2024,2026,-31.95,115.86,-32.07205196,115.8667943

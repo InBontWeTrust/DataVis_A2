@@ -1,0 +1,78 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+"vconcat": [
+    {
+        "width": 500,
+  "height": 450,
+  "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal"},
+  "projection": {"type": "mercator", "scale": 550, "center": [140,-10]},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "../data/privacy_legislation.csv",
+        "format": {"type": "csv"}
+      },
+
+      "mark": {"type": "circle"},
+      "transform": [{"filter": {"param": "time_brush"}}],
+      "encoding": {
+        "longitude": {"field": "JitteredLongitude", "type": "quantitative"},
+        "latitude": {"field": "JitteredLatitude", "type": "quantitative"},
+        "color": {"field": "Location", "type": "nominal", "legend": {"orient": "none",
+        "legendX": -60,
+        "legendY": 325,
+        "padding": 8}},
+
+      "tooltip": [
+        {"field": "Location", "type": "nominal"}
+
+
+      
+
+      ]
+
+      }
+    }
+  ]
+
+
+    },
+
+
+    {
+        "data": {
+        "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv", "format": {
+        "type": "csv"
+        }
+        },
+        "title": {"text": " ", "subtitle": "Timeline of Australian Privacy Legislation"},
+        "width": 500,
+        "mark": "bar",
+        "params": [
+{"name": "time_brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
+
+        "encoding": {
+            "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0}, "sort": "x"},
+            "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1970, 2027]}},
+            "x2": {"field": "End"},
+            "color": {"field": "Location", "type": "nominal"},
+            "tooltip": [
+            {"field": "Legislation", "type": "nominal"},
+            {"field": "Location", "type": "nominal"},
+            {"field": "Start", "type": "quantitative"},
+            {"field": "End", "type": "quantitative"}
+            ]
+        }
+        }
+    ]
+}
