@@ -3,9 +3,9 @@
 
 "vconcat": [
     {
-        "width": 500,
+        "width": 750,
   "height": 450,
-  "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal"},
+  "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal", "dx": -75},
   "projection": {"type": "mercator", "scale": 550, "center": [140,-10]},
   "layer": [
     {
@@ -53,8 +53,9 @@
         "type": "csv"
         }
         },
-        "title": {"text": " ", "subtitle": "Timeline of Australian Privacy Legislation"},
-        "width": 500,
+        
+        "title": {"text": "Timeline of Australian Privacy Legislation", "dx": -75},
+        "width": 750,
         "mark": "bar",
         "params": [
 {"name": "time_brush", "select": {"type": "interval",
@@ -62,9 +63,9 @@
 ],
 
         "encoding": {
-            "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0}, "sort": "x"},
+            "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0, "labelFontSize": 7.5}, "sort": "x"},
             "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1970, 2027]}},
-            "x2": {"field": "End"},
+            "x2": {"field": "End", "title": "Years In Force"},
             "color": {"field": "Location", "type": "nominal"},
             "tooltip": [
             {"field": "Legislation", "type": "nominal"},

@@ -45,6 +45,10 @@
     
   </div>
 
+  <div class="pure-g">
+    <div class="pure-u-1-1" id="concat_aus"></div>
+  </div>
+
 
 
 
@@ -71,6 +75,11 @@
 
   var spec3 = "js/dot_map.vg.json";
   vegaEmbed('#dot_map', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec4 = "js/concat_aus.vg.json";
+  vegaEmbed('#concat_aus', spec4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
