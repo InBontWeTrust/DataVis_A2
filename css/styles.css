@@ -31,6 +31,7 @@ h2 {
 p {
     color: #527298;
     font-size: 16px;
+    padding: 10px;
 }
 
 
@@ -65,9 +66,9 @@ p {
 }
 
 #header-title h1 {
-	font-family: "Bitcount Single", system-ui;
+	font-family: "Press Start 2P", system-ui;
 	color: white;
-	font-size: 60px;
+	font-size: 50px;
 	font-weight: 400;
 
 }

@@ -17,12 +17,13 @@
     },
     {
       "data": {
-        "url": "../data/privacy_legislation.csv",
+        "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv",
         "format": {"type": "csv"}
       },
 
       "mark": {"type": "circle"},
-      "transform": [{"filter": {"param": "time_brush"}}],
+      "transform": [{"filter": {"param": "time_brush"}}
+    ],
       "encoding": {
         "longitude": {"field": "JitteredLongitude", "type": "quantitative"},
         "latitude": {"field": "JitteredLatitude", "type": "quantitative"},
@@ -32,7 +33,10 @@
         "padding": 8}},
 
       "tooltip": [
-        {"field": "Location", "type": "nominal"}
+        {"field": "Legislation", "type": "nominal"},
+        {"field": "Location", "type": "nominal"},
+        {"field": "Start", "type": "quantitative"},
+        {"field": "End", "type": "quantitative"}
 
 
       
@@ -54,7 +58,7 @@
         }
         },
         
-        "title": {"text": "Timeline of Australian Privacy Legislation", "dx": -75},
+        "title": {"text": "Timeline of Australian Privacy Legislation", "subtitle": "Click and drag to see legislation commencing between a specified time period on the map", "dx": -75},
         "width": 750,
         "mark": "bar",
         "params": [
@@ -64,7 +68,7 @@
 
         "encoding": {
             "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0, "labelFontSize": 7.5}, "sort": "x"},
-            "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1970, 2027]}},
+            "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1970, 2026]}},
             "x2": {"field": "End", "title": "Years In Force"},
             "color": {"field": "Location", "type": "nominal"},
             "tooltip": [

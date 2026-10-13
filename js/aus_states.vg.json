@@ -6,6 +6,7 @@
       "type": "csv"
     }
   },
+  
   "mark": "bar",
   "encoding": {
     "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0}, "sort": "x"},
