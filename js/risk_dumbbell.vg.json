@@ -1,11 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Perceived Privacy Risks in Australia", "subtitle": "Percentage of Australians Concerned About Privacy Risks"},
 
-  "data": {"url": "../data/privacy_risks_long.csv", "format": {"type": "csv"}},
+  "data": {"url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_risks_long.csv", "format": {"type": "csv"}},
   "encoding": {
     "x": {
       "field": "Percentage",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Percentage of Australians Concerned"
     },
     "y": {
       "field": "PrivacyRisk",
@@ -39,14 +41,16 @@
         "color": {
           "field": "Year",
           "type": "ordinal",
-          "scale": {
-            "domain": [2023, 2026],
-            "range": ["#e6959c", "#911a24"]
-          },
           "title": "Year"
         },
         "size": {"value": 100},
-        "opacity": {"value": 1}
+        "opacity": {"value": 1},
+        "tooltip": [
+          {"field": "PrivacyRisk", "type": "nominal"},
+          {"field": "Percentage", "type": "quantitative"},
+          {"field": "Year", "type": "ordinal"}
+        ]
+
       }
     }
 

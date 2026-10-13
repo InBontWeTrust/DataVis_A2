@@ -51,21 +51,61 @@
 
   <div class="pure-g">
     <div class="pure-u-1-2"> 
-      <h2>Federal Legislation</h2>
+      <h4>Federal Legislation</h4>
       <p>Information about federal privacy legislation in Australia.</p>
     </div>
     <div class="pure-u-1-2"> 
-      <h2>State Legislation</h2>
+      <h4>State Legislation</h4>
       <p>Information about state-level privacy legislation in Australia. Note: Not all legislation with reference to privacy is included, only dealing with major privacy enhancing law.</p>
     </div>
   </div>
 
+  <div class="pure-g">
+    <div class="pure-u-1-2" id="privacy_bump"></div>
+    <div class="pure-u-1-2" id="risk_dumbbell"></div>
+  </div>
 
+    <div class="pure-g">
+    <div class="pure-u-1-2"> 
+      <h4>Privacy Rankings</h4>
+      <p>Information about federal privacy legislation in Australia.</p>
+    </div>
+    <div class="pure-u-1-2"> 
+      <h4>Percentage Changes</h4>
+      <p>Information about state-level privacy legislation in Australia. Note: Not all legislation with reference to privacy is included, only dealing with major privacy enhancing law.</p>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1"> 
+      <h2>Europe: Stronger Protections and Enforcement</h2>
+    </div>
+    
+  </div>
 
 
   <div class="pure-g">
-    <div class="pure-u-1-2" id="choropleth_map"></div>
+    <div class="pure-u-3-4" id="choropleth_map"></div>
+    <div class="pure-u-1-4">
+      <h4>Choropleth Map</h4>
+      <p>This choropleth map shows the distribution of privacy concerns across different regions in Australia. The darker the color, the higher the level of concern.</p>
+    </div>
+  </div>
+
+  <div class="pure-g">
     <div class="pure-u-1-2" id="dot_map"></div>
+    <div class="pure-u-1-2" id="GDPR_fine_scatter"></div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1-2"> 
+      <h4>Map</h4>
+      <p>Information about federal privacy legislation in Australia.</p>
+    </div>
+    <div class="pure-u-1-2"> 
+      <h4>Scatter</h4>
+      <p>Information about state-level privacy legislation in Australia. Note: Not all legislation with reference to privacy is included, only dealing with major privacy enhancing law.</p>
+    </div>
   </div>
 
 
@@ -94,7 +134,21 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  
+  var spec5 = "js/risk_dumbbell.vg.json";
+  vegaEmbed('#risk_dumbbell', spec5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec6 = "js/privacy_bump.vg.json";
+  vegaEmbed('#privacy_bump', spec6).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec7 = "js/GDPR_fine_scatter.vg.json";
+  vegaEmbed('#GDPR_fine_scatter', spec7).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
 </script>
 
 </body>
