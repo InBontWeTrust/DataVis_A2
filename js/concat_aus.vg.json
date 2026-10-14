@@ -17,7 +17,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/js/geoBoundaries-AUS-ADM1.topojson",
+       "url": "/australia_states_simplified.topojson",
         "format": {"type": "topojson", "feature": "AUSADM1gbOpen"}
       },
       "mark": {"type": "geoshape", "fill": null, "stroke": "white"}

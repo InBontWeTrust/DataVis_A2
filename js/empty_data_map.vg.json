@@ -33,7 +33,7 @@
           "field": "GDPRAdequacy",
           "type": "nominal",
           "scale": {
-            "range": ["lightgreen", "seagreen", "darkgreen", "tan"]
+            "range": ["limegreen", "darkgreen", "darkblue", "lightgray"]
           },
           "legend": {
           "title": "GDPR Adequacy",
