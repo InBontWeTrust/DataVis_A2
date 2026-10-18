@@ -86,7 +86,7 @@
 
         "encoding": {
             "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0, "labelFontSize": 7.5}, "sort": "x"},
-            "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1970, 2026]}},
+            "x": {"field": "Start", "type": "quantitative", "scale": {"domain": [1975, 2026]}},
             "x2": {"field": "End", "title": "Years In Force"},
             "color": {"field": "Location", "type": "nominal"},
             "tooltip": [

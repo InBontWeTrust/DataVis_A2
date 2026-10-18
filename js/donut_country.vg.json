@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Proportion of GDPR Fines by Country", "subtitle": "Only including fines over one million Euros."},
+  "width": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_avgfines_trimmed.csv", "format": {
+      "type": "csv"
+    }
+  },
+  
+  "encoding": {
+    "theta": {"field": "TotalFine", "type": "quantitative", "stack": true},
+    "color": {"field": "CountryName", "type": "nominal", "legend": {"title": "Country"}}
+  },
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 50}
+  }, {
+    "mark": {"type": "text", "radius": 130},
+    "encoding": {
+      "text": {"field": "TotalFine", "type": "quantitative", "format": ",.0f"}
+    }
+  }]
+}
