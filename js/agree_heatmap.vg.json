@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/agree.csv", "format": {"type": "csv"}},
+  "data": {"url": "../data/agree.csv", "format": {"type": "csv"}},
   "title": {"text": "Agreement with Privacy Statements in Australia", "subtitle": "Percentage of Australians Agreeing with Privacy Statements"},
   "width": 400,
   "height": 400,
-  "transform": [{"calculate": "split(datum.Question, '.')", "as": "question"}],
+  "transform": [{"calculate": "split(datum.Question, 'z')", "as": "question"}],
   "encoding": {
     "y": {"field": "question", "type": "nominal", "axis": {"labelLimit": 150}},
-    "x": {"field": "Year", "type": "ordinal"}
+    "x": {"field": "Year", "type": "ordinal", "axis": {"labelAngle": 0}}
   },
   "layer": [
     {
