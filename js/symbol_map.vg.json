@@ -28,7 +28,7 @@
           "type": "quantitative",
           "title": "Total Fine (Euros)",
           "scale": {"type": "sqrt", "zero": false, "range": [10, 1000]},
-          "legend": {"title": "Total Fine (Euros)", "values":[2000000, 40000000, 200000000, 4000000000], "orient": "bottom"}
+          "legend": {"title": "Total Fine (Euros)", "values":[2000000, 40000000, 200000000, 4000000000], "orient": "bottom-left", "direction": "horizontal", "fillColor": "white"}
         },
       "tooltip": [
         {"field": "CountryName", "type": "nominal", "title": "Country"},

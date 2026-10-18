@@ -10,14 +10,22 @@
   
   "encoding": {
     "theta": {"field": "TotalFine", "type": "quantitative", "stack": true},
-    "color": {"field": "CountryName", "type": "nominal", "legend": {"title": "Country"}}
+    "color": {"field": "CountryName", "type": "nominal", "legend": null}
   },
   "layer": [{
     "mark": {"type": "arc", "innerRadius": 50}
   }, {
-    "mark": {"type": "text", "radius": 130},
+    "mark": {"type": "text", "radius": 135},
     "encoding": {
       "text": {"field": "TotalFine", "type": "quantitative", "format": ",.0f"}
     }
-  }]
+  },
+  {
+    "mark": {"type": "text", "radius": 135, "fontWeight": "bold", "dy": -10},
+    "encoding": {
+      "text": {"field": "CountryName", "type": "nominal"}
+    }
+  }
+
+]
 }

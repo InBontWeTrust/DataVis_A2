@@ -29,19 +29,20 @@ h2 {
     color: #527298;
     font-size: 30px;
     font-family: "Roboto Mono", system-ui;
+    background-color: white;
 }
 
 h4 {
     text-align: center;
     color: #527298;
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "sans-serif";
 }
 
 
 p {
     color: #527298;
-    font-size: 10px;
+    font-size: 12px;
     padding: 10px;
     font-family: "Roboto Mono", system-ui;
 }
@@ -61,20 +62,9 @@ p {
 
 #header-content p {
 	color: white;
+    font-size: 14px;
 	padding: 30px;
 	
-}
-
-.bitcount-single-header {
-  font-family: "Bitcount Single", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0;
 }
 
 #header-title h1 {

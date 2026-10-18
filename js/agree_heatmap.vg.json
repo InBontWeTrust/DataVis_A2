@@ -4,7 +4,7 @@
   "title": {"text": "Agreement with Privacy Statements in Australia", "subtitle": "Percentage of Australians Agreeing with Privacy Statements"},
   "width": "container",
   "height": 300,
-  "transform": [{"calculate": "split(datum.Question, 'z')", "as": "question"}],
+  "transform": [{"calculate": "split(datum.Question, ' z')", "as": "question"}],
   
   "encoding": {
     "y": {"field": "Question", "type": "nominal", "axis": {"labelLimit": 150, "labels": false}},
