@@ -27,7 +27,7 @@
           "field": "TotalFine",
           "type": "quantitative",
           "title": "Total Fine (Euros)",
-          "scale": {"type": "linear", "zero": false, "range": [0, 10000]},
+          "scale": {"type": "sqrt", "zero": false, "range": [10, 1000]},
           "legend": {"title": "Total Fine (Euros)", "values":[2000000, 40000000, 200000000, 4000000000], "orient": "bottom"}
         },
       "tooltip": [

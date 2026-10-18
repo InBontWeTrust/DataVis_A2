@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Perceived Privacy Risks in Australia", "subtitle": "Percentage of Australians Concerned About Privacy Risks"},
-
+  "width": "container",
   "data": {"url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_risks_long.csv", "format": {"type": "csv"}},
   "encoding": {
     "x": {
