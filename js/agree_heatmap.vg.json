@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "../data/agree.csv", "format": {"type": "csv"}},
+  "encoding": {
+    "y": {"field": "Question", "type": "nominal"},
+    "x": {"field": "Year", "type": "ordinal"}
+  },
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "color": {
+          "field": "Response",
+          "type": "quantitative",
+          "title": "null",
+          "legend": {"direction": "horizontal", "gradientLength": 120}
+        }
+      }
+    },
+    {
+      "mark": "text",
+      "encoding": {
+        "text": {"field": "Response", "type": "quantitative"},
+        "color": {
+          "condition": {"test": "datum['Response'] < 40", "value": "black"},
+          "value": "white"
+        }
+      }
+    }
+  ],
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent"}
+  }
+}

@@ -2,8 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Largest GDPR Fines by Sector Over Time",
   "subtitle": "Fines over 1,000,000 Euros, 2019-2026"},
+  "width": "container",
+  "height": 430,
   "data": {
-    "url": "../data/GDPR_fines.csv", "format": {
+    "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_fines.csv", "format": {
       "type": "csv"
     }
   },
@@ -11,19 +13,22 @@
   { "calculate": "toDate(datum.Date)", "as": "date" },
   { "calculate": "log(datum.Fine)", "as": "logFine" }
 ],
-  "mark": "point",
+  "mark": "circle",
   "encoding": {
     "x": {
       "field": "date",
       "type": "temporal",
-      "scale": {"zero": false}
+      "scale": {"zero": false},
+      "axis": {"title": "Date of Fine"}
     },
     "y": {
       "field": "Fine",
       "type": "quantitative",
-      "scale": {"zero": false}
+      "scale": {"type": "log"},
+      "axis": {"title": "Fine Amount (Euros)"}
+    
     },
-    "color": {"field": "Sector", "type": "nominal"},
+    "color": {"field": "Sector", "type": "nominal", "legend": {"fillColor": null, "title": "Sector", "legendX": 10, "legendY": 5, "orient": "none"}},
     "tooltip": [
       {"field": "Controller / Processor", "type": "nominal"},
       {"field": "date", "type": "temporal"},
