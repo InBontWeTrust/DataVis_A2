@@ -1,12 +1,23 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
+"params": [
+  {
+    "name": "start_year",
+    "value": 2026,
+    "bind": {
+      "input": "range",
+      "min": 1970,
+      "max": 2026,
+      "step": 1,
+      "name": "Legislation Active In: "
+    }
+  }],
 "vconcat": [
     {
         "width": 550,
   "height": 450,
   "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal", "dx": 30},
-  "projection": {"type": "mercator", "scale": 550, "center": [100,-11]},
+  "projection": {"type": "mercator", "scale": 650, "center": [105,-11]},
   "layer": [
     {
       "data": {
@@ -29,8 +40,11 @@
       },
 
       "mark": {"type": "circle"},
-      "transform": [{"filter": {"param": "time_brush"}}
-    ],
+      "transform": [
+        {
+          "filter": "datum.Start <= start_year && datum.End >= start_year"
+        }
+      ],
       "encoding": {
         "longitude": {"field": "JitteredLongitude", "type": "quantitative"},
         "latitude": {"field": "JitteredLatitude", "type": "quantitative"},
@@ -65,13 +79,10 @@
         }
         },
         
-        "title": {"text": "Timeline of Australian Privacy Legislation", "subtitle": "Click and drag to see legislation commencing between a specified time period on the map", "dx": -75},
+        "title": {"text": "Timeline of Australian Privacy Legislation", "subtitle": "Use the slider below to view legislation active in a specific year on the map", "dx": -75},
         "width": 750,
         "mark": "bar",
-        "params": [
-{"name": "time_brush", "select": {"type": "interval",
-"encodings": ["x"]}}
-],
+        
 
         "encoding": {
             "y": {"field": "Legislation", "type": "nominal", "axis": {"labelAngle": 0, "labelFontSize": 7.5}, "sort": "x"},

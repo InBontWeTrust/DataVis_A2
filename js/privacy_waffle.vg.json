@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A 10x10 waffle chart with 5 categories.",
+  "width": "container",
+  "height": 300,
+  "title": {
+    "text": "Increasing Concern About Privacy in Australia",
+    "subtitle": "Percentage of Australians and their Changing Concern of Privacy in the Last Five Years"
+  },
+  "data": {
+    "values": [
+      {"category": "Much less concerned", "count": 1},
+      {"category": "A little less concerned", "count": 1},
+      {"category": "About the same", "count": 12},
+      {"category": "A little more concerned", "count": 31},
+      {"category": "Much more concerned", "count": 56}
+    ]
+  },
+  "transform": [
+    {"window": [{"op": "sum", "field": "count", "as": "cumulative"}], "frame": [null, 0]},
+    {
+      "calculate": "datum.cumulative - datum.count",
+      "as": "start_idx"
+    },
+    {"calculate": "datum.cumulative", "as": "end_idx"},
+    {
+      "window": [{"op": "row_number", "as": "row_num"}],
+      "ignorePeers": true
+    },
+    {
+      "calculate": "sequence(0, 100)",
+      "as": "grid"
+    },
+    {"flatten": ["grid"]},
+    {
+      "filter": "datum.grid >= datum.start_idx && datum.grid < datum.end_idx"
+    },
+    {
+      "calculate": "datum.grid % 10",
+      "as": "x"
+    },
+    {
+      "calculate": "9 - floor(datum.grid / 10)",
+      "as": "y"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 2,
+    "width": 26,
+    "height": 26
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "ordinal",
+      "axis": null
+    },
+    "y": {
+      "field": "y",
+      "type": "ordinal",
+      "axis": null
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "range": ["lightgreen", "red", "lightgrey", "green", "darkred"]
+      },
+      "legend": {
+        "title": "Level of Concern",
+        "values": ["Much more concerned", "A little more concerned", "About the same", "A little less concerned", "Much less concerned"]
+      }
+    },
+    "tooltip": [
+      {"field": "category", "type": "nominal", "title": "Category"},
+      {"field": "count", "type": "quantitative", "title": "Percentage of Australians"}
+    ]
+  }
+  
+}
