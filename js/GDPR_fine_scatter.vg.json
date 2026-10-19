@@ -11,13 +11,13 @@
     }
   },
   "transform": [
-  { "calculate": "toDate(datum.Date)", "as": "date" },
+  { "calculate": "toDate(datum.Date)", "as": "parseddate" },
   { "calculate": "log(datum.Fine)", "as": "logFine" }
 ],
   "mark": "circle",
   "encoding": {
     "x": {
-      "field": "date",
+      "field": "parseddate",
       "type": "temporal",
       "scale": {"zero": false},
       "axis": {"title": "Date of Fine"}
@@ -32,7 +32,7 @@
     "color": {"field": "Sector", "type": "nominal", "legend": {"fillColor": null, "title": "Sector", "legendX": 10, "legendY": 5, "orient": "none", "values": ["Employment", "Finance, Insurance and Consulting", "Health Care", "Individuals and Private Associations", "Industry and Commerce", "Media, Telecoms and Broadcasting", "Not assigned", "Public Sector and Education", "Real Estate", "Transportation and Energy"]}},
     "tooltip": [
       {"field": "Controller / Processor", "type": "nominal"},
-      {"field": "date", "type": "temporal"},
+      {"field": "parseddate", "type": "temporal"},
       {"field": "Fine", "type": "quantitative"},
       {"field": "Sector", "type": "nominal"}
     ]
