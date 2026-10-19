@@ -6,10 +6,8 @@
   "height": 430,
   "data": {
     "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_fines.csv", "format": {
-      "type": "csv",
-      "parse": {
-        "Date": "time:'%d/%m/%Y"
-      }
+      "type": "csv"
+      
     }
   },
   "transform": [
