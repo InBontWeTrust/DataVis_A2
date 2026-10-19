@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "GDPR Data Protection Adequacy Ratings per Country",
+  "title": "Data Protection Adequacy Ratings by Country",
   "width": "container",
   "height": 400,
   "data": {

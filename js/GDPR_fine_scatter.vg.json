@@ -24,7 +24,7 @@
     "y": {
       "field": "Fine",
       "type": "quantitative",
-      "scale": {"type": "log"},
+      "scale": {"type": "log", "zero": true},
       "axis": {"title": "Fine Amount (Euros)"}
     
     },
