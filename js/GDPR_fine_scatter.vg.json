@@ -6,7 +6,10 @@
   "height": 430,
   "data": {
     "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_fines.csv", "format": {
-      "type": "csv"
+      "type": "csv",
+      "parse": {
+        "Date": "time:'%d/%m/%Y"
+      }
     }
   },
   "transform": [
@@ -28,7 +31,7 @@
       "axis": {"title": "Fine Amount (Euros)"}
     
     },
-    "color": {"field": "Sector", "type": "nominal", "legend": {"fillColor": null, "title": "Sector", "legendX": 10, "legendY": 5, "orient": "none"}},
+    "color": {"field": "Sector", "type": "nominal", "legend": {"fillColor": null, "title": "Sector", "legendX": 10, "legendY": 5, "orient": "none", "values": ["Employment", "Finance, Insurance and Consulting", "Health Care", "Individuals and Private Associations", "Industry and Commerce", "Media, Telecoms and Broadcasting", "Not assigned", "Public Sector and Education", "Real Estate", "Transportation and Energy"]}},
     "tooltip": [
       {"field": "Controller / Processor", "type": "nominal"},
       {"field": "date", "type": "temporal"},
