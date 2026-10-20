@@ -25,7 +25,26 @@
     "encoding": {
       "text": {"field": "CountryName", "type": "nominal"}
     }
+  },
+  {
+    "layer": [{
+    "mark": {
+      "type": "text",
+      "lineBreak": "\n",
+      "align": "center",
+      "dx": -130,
+      "dy": 80,
+      "text": "Ireland's GDPR fines \nmake up 60% of \nthe value of fines \nover one million Euros.",
+      "fontStyle": "bold"
+
+    },
+    "encoding": {
+      "color": {"value": "black"}
+    }
+  }]
   }
+      
+    
 
 ]
 }

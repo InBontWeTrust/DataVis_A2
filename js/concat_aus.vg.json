@@ -14,10 +14,10 @@
   }],
 "vconcat": [
     {
-        "width": 550,
-  "height": 450,
+        "width": 600,
+  "height": 550,
   "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal", "dx": 30},
-  "projection": {"type": "mercator", "scale": 650, "center": [105,-11]},
+  "projection": {"type": "mercator", "scale": 815, "center": [112,-11]},
   "layer": [
     {
       "data": {
@@ -49,9 +49,11 @@
         "longitude": {"field": "JitteredLongitude", "type": "quantitative"},
         "latitude": {"field": "JitteredLatitude", "type": "quantitative"},
         "color": {"field": "Location", "type": "nominal", "legend": {"orient": "none",
-        "legendX": -60,
-        "legendY": 325,
+        "legendX": -90,
+        "legendY": 425,
         "padding": 8}},
+
+      
 
       "tooltip": [
         {"field": "Legislation", "type": "nominal"},
@@ -65,7 +67,58 @@
       ]
 
       }
+    },
+    {
+      "layer": [
+        
+        {
+          "data": {
+          "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv",
+          "format": {"type": "csv"}
+        },
+          "transform": [
+            {
+              "filter": "datum.Location === 'Western Australia'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "left",
+            "dx": -400,
+            "dy": 30,
+            "text": "Western Australia is the \nmost recent state to \nadopt its own privacy \nlegislation in 2024.",
+            "fontStyle": "bold"
+          }
+        }
+      ]
+    },
+    {
+      "layer": [
+        
+        {
+          "data": {
+          "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv",
+          "format": {"type": "csv"}
+        },
+          "transform": [
+            {
+              "filter": "datum.Legislation === 'Privacy Act 1988'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "left",
+            "dx": 270,
+            "dy": 100,
+            "text": "The Privacy Act 1988 (Cth) \nis the most prominent \nand wide-reaching privacy \nlegislation in Australia.",
+            "fontStyle": "bold"
+          }
+        }
+      ]
     }
+    
   ]
 
 
@@ -81,6 +134,8 @@
         
         "title": {"text": "Timeline of Australian Privacy Legislation", "subtitle": "Use the slider below to view legislation active in a specific year on the map", "dx": -75},
         "width": 750,
+
+        "layer":[{
         "mark": "bar",
         
 
@@ -96,6 +151,35 @@
             {"field": "End", "type": "quantitative"}
             ]
         }
+      },
+      {
+      "layer": [
+        
+        {
+          "data": {
+          "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv",
+          "format": {"type": "csv"}
+        },
+          "transform": [
+            {
+              "filter": "datum.Legislation === 'Privacy Act 1988'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "center",
+            "dx": 160,
+            "dy": 100,
+            "text": "The Privacy and Other Legislation \nAmendment Act 2024 (Cth) \n is the first to pass of multiple proposed \ntranches of federal privacy reforms.",
+            "fontStyle": "bold"
+          }
         }
+      ]
+    }
+
+      ]
+        
+    }
     ]
 }

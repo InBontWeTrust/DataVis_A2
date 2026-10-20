@@ -46,6 +46,32 @@
           {"field": "GDPRAdequacy", "type": "nominal", "title": "GDPR Adequacy"}
         ]
       }
+    },
+
+    {
+      "layer": [
+        
+        {
+          "data": {
+          "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv",
+          "format": {"type": "csv"}
+        },
+          "transform": [
+            {
+              "filter": "datum.Legislation === 'Privacy Act 1988'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "center",
+            "dx": -240,
+            "dy": -115,
+            "text": "Canada and the \nUSA have special \nagreements \nfor commercial \norganisations.",
+            "fontStyle": "bold"
+          }
+        }
+      ]
     }
   ]
   

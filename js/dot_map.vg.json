@@ -34,6 +34,31 @@
       ]
 
       }
+    },
+    {
+      "layer": [
+        
+        {
+          "data": {
+          "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/privacy_legislation.csv",
+          "format": {"type": "csv"}
+        },
+          "transform": [
+            {
+              "filter": "datum.Legislation === 'Privacy Act 1988'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "center",
+            "dx": -80,
+            "dy": 75,
+            "text": "Italy has issued the\nmost GDPR fines \nworth over one million \nEuros, with 35 in total.",
+            "fontStyle": "bold"
+          }
+        }
+      ]
     }
   ]
 }

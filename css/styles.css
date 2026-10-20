@@ -36,7 +36,7 @@ h4 {
     text-align: center;
     color: #527298;
     font-size: 14px;
-    font-family: "Roboto", "sans-serif";
+    font-family: "Roboto Mono", "sans-serif";
 }
 
 
@@ -83,6 +83,7 @@ a {
     padding-right: 20px;
     padding-top: 0px;
     font-family: "Roboto Mono", system-ui;
+    display: inline-block;
 }
 
 #data p {

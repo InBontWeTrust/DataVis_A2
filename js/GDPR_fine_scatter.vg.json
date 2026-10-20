@@ -10,10 +10,16 @@
       
     }
   },
+  "layer": [
+  {
+
   "transform": [
   { "calculate": "toDate(datum.Date)", "as": "parseddate" },
   { "calculate": "log(datum.Fine)", "as": "logFine" }
-],
+  ],
+
+
+
   "mark": "circle",
   "encoding": {
     "x": {
@@ -37,5 +43,37 @@
       {"field": "Sector", "type": "nominal"}
     ]
 
+
+    }
+
+  },
+
+  {
+    "data": {
+    "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_fines.csv", "format": {
+      "type": "csv"
+      
+    }
+  },
+    
+          "transform": [
+            {
+              "filter": "datum.ETid === 'ETid-3232'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "center",
+            "dx": 110,
+            "dy": -150,
+            "text": "In August 2026,\nUber Technologies \nreceived the second largest \nGDPR fine in history.",
+            "fontStyle": "bold"
+          }
+        
+
   }
+]
+  
+  
 }
