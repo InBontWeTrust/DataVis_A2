@@ -77,3 +77,15 @@ p {
 
 }
 
+a {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    font-family: "Roboto Mono", system-ui;
+}
+
+#data p {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
