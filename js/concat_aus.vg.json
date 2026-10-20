@@ -84,8 +84,8 @@
           "mark": {
             "type": "text",
             "lineBreak": "\n",
-            "align": "left",
-            "dx": -400,
+            "align": "center",
+            "dx": -330,
             "dy": 30,
             "text": "Western Australia is the \nmost recent state to \nadopt its own privacy \nlegislation in 2024.",
             "fontStyle": "bold"
@@ -109,8 +109,8 @@
           "mark": {
             "type": "text",
             "lineBreak": "\n",
-            "align": "left",
-            "dx": 270,
+            "align": "center",
+            "dx": 340,
             "dy": 100,
             "text": "The Privacy Act 1988 (Cth) \nis the most prominent \nand wide-reaching privacy \nlegislation in Australia.",
             "fontStyle": "bold"

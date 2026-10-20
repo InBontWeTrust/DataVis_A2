@@ -33,7 +33,7 @@
       }
     },
     {
-      "mark": {"type": "text", "dx": -75, "align": "right", "fontSize": 10},
+      "mark": {"type": "text", "dx": -82, "align": "right", "fontSize": 10},
       "encoding": {
         "text": 
             {"field": "question", "type": "nominal"},
