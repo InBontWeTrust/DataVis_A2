@@ -46,13 +46,29 @@
         "size": {"value": 100},
         "opacity": {"value": 1},
         "tooltip": [
-          {"field": "PrivacyRisk", "type": "nominal"},
+          {"field": "PrivacyRisk", "type": "nominal", "title": "Privacy Risk"},
           {"field": "Percentage", "type": "quantitative"},
           {"field": "Year", "type": "ordinal"}
         ]
 
       }
-    }
+    },
+    {
+          "transform": [
+            {
+              "filter": "datum.Percentage < 30"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "lineBreak": "\n",
+            "align": "center",
+            "dx": 0,
+            "dy": 100,
+            "text": "On average, each privacy \nrisk's concern increased \nby 14%.",
+            "fontStyle": "bold"
+          }
+      }
 
   ]
 }
