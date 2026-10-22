@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Proportion of GDPR Fines by Country", "subtitle": "Only including fines over one million Euros."},
+  "title": {"text": "Proportion of GDPR Fines by Country", "subtitle": "Only including fines over one million Euros", "fontSize": 18},
   "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/InBontWeTrust/DataVis_A2/refs/heads/main/data/GDPR_avgfines_trimmed.csv", "format": {

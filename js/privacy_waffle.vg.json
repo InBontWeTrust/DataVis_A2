@@ -4,8 +4,8 @@
   "width": "container",
   "height": 300,
   "title": {
-    "text": "Increasing Concern About Data Privacy in Australia",
-    "subtitle": "Australians' change in concern over the last five years"
+    "text": "Changes to Privacy Concerns",
+    "subtitle": "Australians' change in concern over the last five years", "fontSize": 18
   },
   "data": {
     "values": [

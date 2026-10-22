@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 300,
-  "title": {"text": "Total GDPR Fines by Country", "subtitle": "Including fines over one million Euros"},
+  "title": {"text": "Total GDPR Fines by Country", "subtitle": "Only including fines over one million Euros", "fontSize": 18},
   "projection": {"type": "equalEarth", "scale": 550, "center": [2,47]},
   "layer": [
     {

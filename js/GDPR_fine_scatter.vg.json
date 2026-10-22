@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Largest GDPR Fines by Sector Over Time",
-  "subtitle": "Fines over 1,000,000 Euros, 2019-2026"},
+  "subtitle": "Fines over 1,000,000 Euros, 2019-2026", "fontSize": 18},
   "width": "container",
   "height": 430,
   "data": {

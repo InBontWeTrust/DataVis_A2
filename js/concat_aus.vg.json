@@ -16,7 +16,7 @@
     {
         "width": 600,
   "height": 550,
-  "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal", "dx": 30},
+  "title": {"text": "Privacy Legislation in Australia", "subtitle": "Legislation by Location, State and Federal", "dx": 30, "fontSize": 18},
   "projection": {"type": "mercator", "scale": 815, "center": [112,-11]},
   "layer": [
     {
@@ -132,7 +132,7 @@
         }
         },
         
-        "title": {"text": "Timeline of Australian Privacy Legislation", "subtitle": "Use the slider below to view legislation active in a specific year on the map", "dx": -75},
+        "title": {"text": "Timeline of Australian Privacy Legislation", "subtitle": "Use the slider below to view legislation active in a specific year on the map", "dx": -75, "fontSize": 18},
         "width": 750,
 
         "layer":[{

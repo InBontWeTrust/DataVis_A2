@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Data Protection Adequacy Ratings by Country", "subtitle": "European Commission decisions that deem protections essentially equivalent to GDPR"},
+  "title": {"text": "Data Protection Adequacy Ratings by Country", "subtitle": "European Commission decisions that deem protections essentially equivalent to GDPR", "fontSize": 18},
   "width": "container",
   "height": 400,
   "data": {

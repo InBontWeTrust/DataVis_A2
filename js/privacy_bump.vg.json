@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Rankings of Privacy Risks in Australia, 2020-2026", "subtitle": "Selected privacy risks ranked by percentage of Australians concerned"},
+  "title": {"text": "Australians' Rankings of Privacy Risks", "subtitle": "Privacy risks ranked by percentage of Australians concerned, 2020-26", "fontSize": 18},
   "width": "container",
   "height": 300,
   "data": {
